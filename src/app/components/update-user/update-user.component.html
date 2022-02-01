@@ -1,0 +1,32 @@
+<div class="header">
+    <h1 mat-dialog-title>Actualizar usuario</h1>
+    <mat-icon>person</mat-icon>
+</div>
+<div mat-dialog-content>
+  <form [formGroup]="userForm" novalidate>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput  formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido paterno</mat-label>
+      <input matInput formControlName="firstname">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido materno</mat-label>
+      <input matInput formControlName="lastname">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Direccion</mat-label>
+      <input matInput formControlName="address">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Telefono</mat-label>
+      <input matInput formControlName="phone">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="onUpdate()">Agregar</button>
+</div>
